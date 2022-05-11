@@ -1,0 +1,139 @@
+    return _Ostr;
+00007FF7EDA21902  mov         rax,qword ptr [_Ostr]  
+}
+00007FF7EDA21909  lea         rsp,[rbp+0C8h]  
+00007FF7EDA21910  pop         rdi  
+00007FF7EDA21911  pop         rbp  
+00007FF7EDA21912  ret  
+--- No source file -------------------------------------------------------------
+00007FF7EDA21913  jmp         qword ptr [__imp_std::basic_ostream<char,std::char_traits<char> >::operator<< (07FF7EDA311E8h)]  
+00007FF7EDA21919  jmp         qword ptr [__imp_std::basic_ostream<char,std::char_traits<char> >::operator<< (07FF7EDA311F0h)]  
+00007FF7EDA2191F  int         3  
+--- C:\Dev\C++\theBasics\theBasics.cpp -----------------------------------------
+#include <iostream>
+#include <string>
+#include <stdlib.h>
+
+int main()
+{
+00007FF7EDA21920  push        rbp  
+00007FF7EDA21922  push        rsi  
+00007FF7EDA21923  push        rdi  
+00007FF7EDA21924  sub         rsp,170h  
+00007FF7EDA2192B  lea         rbp,[rsp+20h]  
+00007FF7EDA21930  lea         rdi,[rsp+20h]  
+00007FF7EDA21935  mov         ecx,24h  
+00007FF7EDA2193A  mov         eax,0CCCCCCCCh  
+00007FF7EDA2193F  rep stos    dword ptr [rdi]  
+00007FF7EDA21941  mov         rax,qword ptr [__security_cookie (07FF7EDA2D000h)]  
+00007FF7EDA21948  xor         rax,rbp  
+00007FF7EDA2194B  mov         qword ptr [rbp+148h],rax  
+00007FF7EDA21952  lea         rcx,[__BFAD9F4C_theBasics@cpp (07FF7EDA33067h)]  
+00007FF7EDA21959  call        __CheckForDebuggerJustMyCode (07FF7EDA213E8h)  
+    int number;
+    number = 8;
+00007FF7EDA2195E  mov         dword ptr [number],8  
+    int integer[5];
+    integer[0] = 5;
+00007FF7EDA21965  mov         eax,4  
+00007FF7EDA2196A  imul        rax,rax,0  
+00007FF7EDA2196E  mov         dword ptr integer[rax],5  
+    int* ptr = &integer[0];
+00007FF7EDA21976  mov         eax,4  
+00007FF7EDA2197B  imul        rax,rax,0  
+00007FF7EDA2197F  lea         rax,integer[rax]  
+00007FF7EDA21984  mov         qword ptr [ptr],rax  
+
+    "Howell";
+    const char name[8] = "Howell";
+00007FF7EDA21988  lea         rax,[name]  
+00007FF7EDA2198C  lea         rcx,[string "Howell" (07FF7EDA2AC58h)]  
+00007FF7EDA21993  mov         rdi,rax  
+00007FF7EDA21996  mov         rsi,rcx  
+00007FF7EDA21999  mov         ecx,7  
+00007FF7EDA2199E  rep movs    byte ptr [rdi],byte ptr [rsi]  
+00007FF7EDA219A0  lea         rax,[rbp+7Fh]  
+00007FF7EDA219A4  mov         rdi,rax  
+00007FF7EDA219A7  xor         eax,eax  
+00007FF7EDA219A9  mov         ecx,1  
+00007FF7EDA219AE  rep stos    byte ptr [rdi]  
+
+    std::cout << number << std::endl;
+00007FF7EDA219B0  mov         edx,dword ptr [number]  
+00007FF7EDA219B3  mov         rcx,qword ptr [__imp_std::cout (07FF7EDA31190h)]  
+00007FF7EDA219BA  call        qword ptr [__imp_std::basic_ostream<char,std::char_traits<char> >::operator<< (07FF7EDA311E8h)]  
+00007FF7EDA219C0  lea         rdx,[std::endl<char,std::char_traits<char> > (07FF7EDA2145Bh)]  
+00007FF7EDA219C7  mov         rcx,rax  
+00007FF7EDA219CA  call        qword ptr [__imp_std::basic_ostream<char,std::char_traits<char> >::operator<< (07FF7EDA31178h)]  
+    std::cout << *ptr << std::endl;
+00007FF7EDA219D0  mov         rax,qword ptr [ptr]  
+00007FF7EDA219D4  mov         edx,dword ptr [rax]  
+00007FF7EDA219D6  mov         rcx,qword ptr [__imp_std::cout (07FF7EDA31190h)]  
+00007FF7EDA219DD  call        qword ptr [__imp_std::basic_ostream<char,std::char_traits<char> >::operator<< (07FF7EDA311E8h)]  
+00007FF7EDA219E3  lea         rdx,[std::endl<char,std::char_traits<char> > (07FF7EDA2145Bh)]  
+00007FF7EDA219EA  mov         rcx,rax  
+00007FF7EDA219ED  call        qword ptr [__imp_std::basic_ostream<char,std::char_traits<char> >::operator<< (07FF7EDA31178h)]  
+
+    std::cin.get();
+00007FF7EDA219F3  mov         rcx,qword ptr [__imp_std::cin (07FF7EDA31150h)]  
+00007FF7EDA219FA  call        qword ptr [__imp_std::basic_istream<char,std::char_traits<char> >::get (07FF7EDA31160h)]  
+}
+00007FF7EDA21A00  xor         eax,eax  
+00007FF7EDA21A02  mov         edi,eax  
+00007FF7EDA21A04  lea         rcx,[rbp-20h]  
+00007FF7EDA21A08  lea         rdx,[__xt_z+1A0h (07FF7EDA2AC40h)]  
+00007FF7EDA21A0F  call        _RTC_CheckStackVars (07FF7EDA21375h)  
+00007FF7EDA21A14  mov         eax,edi  
+00007FF7EDA21A16  mov         rcx,qword ptr [rbp+148h]  
+00007FF7EDA21A1D  xor         rcx,rbp  
+00007FF7EDA21A20  call        __security_check_cookie (07FF7EDA211FEh)  
+00007FF7EDA21A25  lea         rsp,[rbp+150h]  
+00007FF7EDA21A2C  pop         rdi  
+00007FF7EDA21A2D  pop         rsi  
+00007FF7EDA21A2E  pop         rbp  
+00007FF7EDA21A2F  ret  
+--- No source file -------------------------------------------------------------
+00007FF7EDA21A30  int         3  
+00007FF7EDA21A31  int         3  
+00007FF7EDA21A32  int         3  
+00007FF7EDA21A33  int         3  
+00007FF7EDA21A34  int         3  
+00007FF7EDA21A35  int         3  
+00007FF7EDA21A36  int         3  
+00007FF7EDA21A37  int         3  
+00007FF7EDA21A38  int         3  
+00007FF7EDA21A39  int         3  
+00007FF7EDA21A3A  int         3  
+00007FF7EDA21A3B  int         3  
+00007FF7EDA21A3C  int         3  
+00007FF7EDA21A3D  int         3  
+00007FF7EDA21A3E  int         3  
+00007FF7EDA21A3F  int         3  
+00007FF7EDA21A40  int         3  
+00007FF7EDA21A41  int         3  
+00007FF7EDA21A42  int         3  
+00007FF7EDA21A43  int         3  
+00007FF7EDA21A44  int         3  
+00007FF7EDA21A45  int         3  
+00007FF7EDA21A46  int         3  
+00007FF7EDA21A47  int         3  
+00007FF7EDA21A48  int         3  
+00007FF7EDA21A49  int         3  
+00007FF7EDA21A4A  int         3  
+00007FF7EDA21A4B  int         3  
+00007FF7EDA21A4C  int         3  
+00007FF7EDA21A4D  int         3  
+00007FF7EDA21A4E  int         3  
+00007FF7EDA21A4F  int         3  
+00007FF7EDA21A50  int         3  
+00007FF7EDA21A51  int         3  
+00007FF7EDA21A52  int         3  
+00007FF7EDA21A53  int         3  
+00007FF7EDA21A54  int         3  
+00007FF7EDA21A55  int         3  
+00007FF7EDA21A56  int         3  
+00007FF7EDA21A57  int         3  
+00007FF7EDA21A58  int         3  
+00007FF7EDA21A59  int         3  
+00007FF7EDA21A5A  int         3  
+00007FF7EDA21A5B  int         3  
